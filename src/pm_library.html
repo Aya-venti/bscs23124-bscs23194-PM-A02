@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Library | Launch Agency</title>
+    <link rel="stylesheet" href="pm_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="pm_index.html" class="logo">Launch</a>
+                <ul class="nav-links">
+                    <li><a href="pm_library.html" class="active">Standards Library</a></li>
+                    <li><a href="pm_comparison.html">Comparison Engine</a></li>
+                    <li><a href="pm_process.html">Process Generator</a></li>
+                </ul>
+                <a href="pm_start.html" class="cta-button">Start Today</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Standards <span class="accent">Library</span></h1>
+            <p>Access PRINCE2, ISO 21502, and PMBOK 7th Edition in multiple formats with advanced search and bookmarking capabilities.</p>
+        </div>
+    </section>
+
+    <section class="library">
+        <div class="container">
+            <div class="section-title">
+                <h2>Available Standards</h2>
+                <p>Browse our comprehensive collection of project management standards</p>
+            </div>
+            
+            <div class="standards-grid">
+                <!-- PRINCE2 Card -->
+                <div class="standard-card">
+                    <div class="standard-header">
+                        <h3>PRINCE2</h3>
+                        <p>Projects IN Controlled Environments</p>
+                    </div>
+                    <div class="standard-content">
+                        <div class="standard-description">
+                            <p>PRINCE2 is a structured project management method that emphasizes dividing projects into manageable and controllable stages. It is a process-based approach for effective project management, used extensively by the UK government and widely recognized and used in the private sector, both in the UK and internationally.</p>
+                        </div>
+                        <div class="standard-actions">
+                            <button class="action-btn" onclick="openStandard('PRINCE2')">
+                                <i class="fas fa-book-open"></i> Read Online
+                            </button>
+                            <button class="action-btn" onclick="downloadStandard('PRINCE2')">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                            <button class="action-btn" onclick="bookmarkStandard('PRINCE2')">
+                                <i class="fas fa-bookmark"></i> Bookmark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PMBOK Card -->
+                <div class="standard-card">
+                    <div class="standard-header">
+                        <h3>PMBOK® Guide 7th Ed.</h3>
+                        <p>A Guide to the Project Management Body of Knowledge</p>
+                    </div>
+                    <div class="standard-content">
+                        <div class="standard-description">
+                            <p>The PMBOK® Guide is PMI's flagship publication and is a fundamental resource for effective project management in any industry. The 7th edition has been updated to reflect the full range of development approaches (predictive, adaptive, hybrid, etc.) and provides a system for value delivery.</p>
+                        </div>
+                        <div class="standard-actions">
+                            <button class="action-btn" onclick="openStandard('PMBOK7')">
+                                <i class="fas fa-book-open"></i> Read Online
+                            </button>
+                            <button class="action-btn" onclick="downloadStandard('PMBOK7')">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                            <button class="action-btn" onclick="bookmarkStandard('PMBOK7')">
+                                <i class="fas fa-bookmark"></i> Bookmark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ISO 21502 Card -->
+                <div class="standard-card">
+                    <div class="standard-header">
+                        <h3>ISO 21502</h3>
+                        <p>Guidance on Project Management</p>
+                    </div>
+                    <div class="standard-content">
+                        <div class="standard-description">
+                            <p>ISO 21502 provides guidance on concepts and processes of project management that are important for, and have impact on, the performance of projects. This document is applicable to any organization, including public, private or community organizations, and to any project, regardless of purpose, outputs, outcomes or benefits.</p>
+                        </div>
+                        <div class="standard-actions">
+                            <button class="action-btn" onclick="openStandard('ISO21502')">
+                                <i class="fas fa-book-open"></i> Read Online
+                            </button>
+                            <button class="action-btn" onclick="downloadStandard('ISO21502')">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                            <button class="action-btn" onclick="bookmarkStandard('ISO21502')">
+                                <i class="fas fa-bookmark"></i> Bookmark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Launch Agency</h3>
+                    <p>We are a full-service digital agency committed to creating innovative solutions for our clients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="pm_index.html">Home</a>
+                    <a href="pm_library.html">Standards Library</a>
+                    <a href="pm_comparison.html">Comparison Engine</a>
+                    <a href="pm_process.html">Process Generator</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Launch Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="pm_app.js"></script>
+</body>
+</html>

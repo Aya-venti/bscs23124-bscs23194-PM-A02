@@ -1,0 +1,554 @@
+{
+  "topics": {
+    "team_leadership": {
+      "title": "1. Team Leadership",
+      "similarities": "• All three frameworks emphasize that leadership is not only about authority but about inspiring confidence, motivating teams, and aligning work with organizational vision. Each standard underlines that without effective leadership, even the most well-defined processes cannot achieve intended benefits.\n\n• Collaboration, trust-building, and shared accountability are common themes. PRINCE2, ISO 21502, and PMBOK 7 each acknowledge that leadership extends beyond directing tasks—it requires engaging stakeholders, mediating conflicts, and fostering a culture where people feel responsible for outcomes.\n\n• Communication is central to leadership in all three: project leaders must ensure clarity of objectives, transparent reporting, and responsiveness to team concerns.",
+      "differences": {
+        "PRINCE2": "• Leadership is primarily embedded in role definitions and responsibilities. For example, the Project Manager directs work through Work Packages, while the Project Board provides strategic leadership via tolerances and decision-making. The focus is on structured governance rather than adaptive leadership behaviors.",
+        "ISO21502": "• Leadership is seen through the lens of competence and organizational governance maturity. It explicitly requires that leaders’ competencies are verified before project governance is formalized, linking leadership to the wider system of accountability and approval in the organization.",
+        "PMBOK": "• Leadership is formalized as one of the 12 Project Management Principles, highlighting stewardship, servant leadership, adaptability, and systems thinking. This makes PMBOK 7 much more explicit about interpersonal skills and adaptive leadership than PRINCE2 or ISO."
+      },
+      "unique": {
+        "PRINCE2": "• Relies heavily on structure over soft skills. Leadership is implicit within the governance hierarchy—e.g., the Project Board’s authority supersedes individual leadership traits. This structural reliance reduces emphasis on interpersonal adaptability.",
+        "ISO21502": "• Unique in requiring explicit competence validation of leaders. Before approving governance structures, organizations must confirm that project managers, sponsors, and governing roles have the necessary skills. This creates a formal link between governance and leadership competence.",
+        "PMBOK": "• Codifies leadership as a guiding principle, making it part of its core philosophy. It uniquely positions the project manager as a servant leader—responsible not only for delivering outputs but for ensuring the well-being, engagement, and empowerment of the team."
+      },
+      "deepLinks": {                 
+         "PMBOK": [67, 118],
+         "PRINCE2": [109],
+         "ISO21502": [22]
+      }    
+    },
+    "delivery_value": {
+      "title": "2. Delivery & Value",
+      "similarities": "• All three frameworks emphasize that projects should deliver outcomes that contribute measurable organizational value, not just deliverables. This shift from “output” to “outcome” is a shared philosophy across PRINCE2, ISO 21502, and PMBOK 7.\n\n• Benefits realization is linked to delivery success in each. They all recognize that project completion is not the end—true success is achieved only when intended benefits are realized and sustained over time.\n\n• Value is contextualized: delivery is expected to serve both business strategy and stakeholder needs, ensuring alignment across operational and strategic levels.",
+      "differences": {
+        "PRINCE2": "• Frames delivery as producing products to agreed quality, time, and cost tolerances. Benefits are not its direct focus during execution but are monitored later in post-project reviews. This makes PRINCE2 more output-focused than ISO and PMBOK.",
+        "ISO21502": "• Directly links delivery to benefits management, requiring outcomes to be sustained beyond project closure. The guidance mandates explicit benefit identification, monitoring, and realization checks, embedding benefits into governance.",
+        "PMBOK": "• Organizes delivery within a system for value delivery, where outcomes are the primary drivers of value. Value delivery is seen as continuous and systemic, rather than a one-time measurement after closure."
+      },
+      "unique": {
+        "PRINCE2": "• Uses Product Descriptions, Product Breakdown Structures (PBS), and Product Flow Diagrams to guide delivery. These tools make delivery tangible and product-focused, distinguishing PRINCE2 as highly artifact-driven.",
+        "ISO21502": "• Mandates post-project activities to ensure benefits are realized and sustained, requiring ongoing accountability beyond closure. This is stricter than PRINCE2’s optional Post Implementation Review.",
+        "PMBOK": "• Positions value delivery as the organizing principle. Delivery is framed in relation to value networks, customer outcomes, and strategic alignment, going beyond structured product creation."
+      },
+      "deepLinks": {                 
+        "PMBOK": [34, 61, 176],
+        "PRINCE2": [90, 338],
+        "ISO21502": [32]
+      }
+    },
+    "tailoring_adaptability": {
+      "title": "3. Tailoring & Adaptability",
+      "similarities": "• Each standard highlights tailoring as essential: no one-size-fits-all approach is adequate for the diversity of projects.\n\n• Tailoring applies across roles, processes, methods, and governance. It ensures that the project management approach aligns with context, complexity, and stakeholder expectations.\n\n• Flexibility is recognized as key to adapting methods to industry, organization, and environmental factors.",
+      "differences": {
+        "PRINCE2": "• Tailoring means scaling the method to the project environment while ensuring its seven principles remain intact. This keeps tailoring within fixed boundaries—it cannot violate PRINCE2’s underlying principles.",
+        "ISO21502": "• Positions tailoring in terms of organizational maturity. Practices are to be aligned with existing governance systems and compliance requirements. Tailoring thus reflects the maturity of the organization’s systems, making it more compliance-driven than PMBOK or PRINCE2.",
+        "PMBOK": "• Tailoring is framed as a core principle in itself. It explicitly guides project managers to adjust methods, performance domains, and practices, with examples and step-by-step tailoring guidance."
+      },
+      "unique": {
+        "PRINCE2": "• Clear rule: tailoring must not undermine its seven principles. This makes tailoring structured yet restricted compared to PMBOK’s flexibility.",
+        "ISO21502": "• Links tailoring to ISO’s broader maturity-improvement goals, requiring alignment with corporate governance and compliance. This connects tailoring not just to projects, but to organizational growth.",
+        "PMBOK": "• Provides detailed tailoring guidance and examples, making adaptation a practical process rather than a theoretical concept. This sets it apart as the most flexible and actionable of the three."
+      },
+      "deepLinks": {                 
+         "PMBOK": [70, 82, 226],
+         "PRINCE2": [60],
+         "ISO21502": [14, 26]
+      }
+    },
+    "models_methods": {
+      "title": "4. Models, Methods, and Artifacts",
+      "similarities": "• All frameworks recognize that models, tools, and artifacts are vital for structuring project work, capturing information, and guiding decision-making.\n\n• They encourage practitioners to select methods contextually, recognizing that the effectiveness of techniques depends on project environment, complexity, and stakeholder needs.\n\n• Risk registers, stakeholder analyses, and performance measurement tools are widely acknowledged as useful across all three standards.",
+      "differences": {
+        "PRINCE2": "• Provides a detailed list of management products such as the Project Brief, Project Initiation Document (PID), Risk Register, Issue Log, and End Stage Report. These artifacts are embedded within processes, making them mandatory in practice. PRINCE2 places stronger emphasis on documentation than the other two.",
+        "ISO21502": "• Intentionally remains tool-agnostic. It provides practice-level guidance (e.g., on risk, quality, stakeholder engagement) but avoids prescribing specific tools. This ensures wide applicability across industries and sectors with differing toolsets.",
+        "PMBOK": "• Introduces an extensive Models/Methods/Artifacts (MMA) catalog, which is unique among the three. The catalog integrates predictive, agile, and hybrid approaches, covering techniques like Kanban boards, Monte Carlo simulation, Earned Value Management (EVM), and stakeholder mapping."
+      },
+      "unique": {
+        "PRINCE2": "• Distinguishes itself through product-based planning artifacts such as the Product Breakdown Structure (PBS) and Product Flow Diagram (PFD), which emphasize deliverable-focused planning.",
+        "ISO21502": "• By deliberately avoiding specific tools, ISO maximizes cross-sector applicability and allows organizations to map its practices onto their existing systems.",
+        "PMBOK": "• The MMA catalog is a comprehensive repository that covers both traditional and adaptive methods, giving practitioners flexibility to mix approaches in hybrid projects."
+      },
+      "deepLinks": {                 
+       "PMBOK": [248],
+       "PRINCE2": [141, 179, 193, 232, 240],
+       "ISO21502": [26]
+      }
+    },
+    "development_approach": {
+      "title": "5. Development Approach",
+      "similarities": "• All three frameworks acknowledge predictive, iterative, adaptive (agile), and hybrid approaches as valid depending on project objectives, risk, and context.\n\n• Each framework stresses that the development approach should align with uncertainty levels, stakeholder expectations, and organizational strategy.\n\n• Flexibility in selecting life-cycle approaches is considered essential for managing complexity and ensuring success.",
+      "differences": {
+        "PRINCE2": "• Naturally aligns with predictive environments, emphasizing controlled stage boundaries and tolerances. Agile compatibility is handled through a separate extension, PRINCE2 Agile, not within the core manual.",
+        "ISO21502": "• Embeds the development approach directly within the project life cycle, explicitly requiring organizations to define whether predictive, adaptive, or hybrid strategies are being used. It links these to governance gates, making the choice part of organizational accountability.",
+        "PMBOK": "• Treats Development Approach & Life Cycle as one of its eight Performance Domains. This provides deeper integration than PRINCE2 or ISO, embedding adaptability directly into performance management."
+      },
+      "unique": {
+        "PRINCE2": "• Its separation of agile into PRINCE2 Agile highlights its predictive origins. The core methodology remains structured and stage-driven.",
+        "ISO21502": "• Requires the chosen development approach to be explicitly aligned with governance gates, making adaptability a formal governance decision.",
+        "PMBOK": "• Embeds development-approach guidance into its domain structure and provides extensive adaptability resources, making it the most practical for hybrid or fast-changing environments."
+      },
+      "deepLinks": {                 
+        "PMBOK": [130],             
+        "PRINCE2": [240],
+        "ISO21502": [17]
+      }
+    },
+    "governance_business": {
+      "title": "6. Governance & Business Case",
+      "similarities": "• Governance in all three frameworks establishes decision-making structures and accountability mechanisms to ensure alignment with organizational objectives.\n\n• A business case is mandatory in each framework, ensuring that projects are justified in terms of value, benefits, and alignment with strategy.\n\n• Stage gates or decision points serve as checkpoints for validating ongoing alignment with the business case.",
+      "differences": {
+        "PRINCE2": "• Governance is enforced via the Project Board, which oversees strategic alignment. The Business Case is updated continuously throughout the life cycle, ensuring sustained justification.",
+        "ISO21502": "• Requires the business case to contain minimum specified content such as objectives, benefits, costs, risks, and timescales. Governance is integrated into broader organizational oversight, aligning project governance with enterprise systems.",
+        "PMBOK": "• Places the business case within the value-delivery system, emphasizing outcomes rather than fixed templates. Governance is conceptualized less as a rigid structure and more as alignment with the system of value delivery."
+      },
+      "unique": {
+        "PRINCE2": "• Embeds governance through the principle of Management by Exception, where tolerances dictate when escalation is needed. This minimizes micromanagement by ensuring the Project Board intervenes only when objectives are at risk.",
+        "ISO21502": "• Unique in requiring a formal specification of business-case content, ensuring that all cases meet a minimum standard of rigor and comparability across projects.",
+        "PMBOK": "• Treats governance as value alignment, positioning the business case not just as a project initiation document but as a living mechanism for aligning projects with organizational strategy and benefits realization."
+      },
+      "deepLinks": {                 
+        "PMBOK": [39],
+        "PRINCE2": [83, 99],
+        "ISO21502": [17]
+      }
+    },
+    "project_lifecycle": {
+      "title": "7. Project Life Cycle",
+      "similarities": "• All three frameworks require that projects be organized into defined phases or stages with decision gates. These gates serve as control points to validate whether the project should proceed, adjust, or terminate.\n\n• They stress that the chosen life cycle should fit the project’s complexity, risk, and context, not be applied in a one-size-fits-all manner.\n\n• Tailoring within the life cycle is recognized as necessary—ensuring methods, processes, and governance structures remain relevant and proportionate.",
+      "differences": {
+        "PRINCE2": "• Mandates stage boundaries that are highly structured, with each stage requiring approval through an End Stage Report and creation of a Stage Plan. These boundaries create strong control but also make PRINCE2 naturally more rigid.",
+        "ISO21502": "• Links each project phase explicitly to governance decisions, requiring that governance structures review progress, risks, and benefits before allowing transitions between phases. This makes life-cycle control more integrated with organizational governance.",
+        "PMBOK": "• Places life-cycle selection under the principle of tailoring. It does not prescribe fixed stages but instead provides guidance for predictive, adaptive, or hybrid cycles, encouraging flexibility to match the project environment."
+      },
+      "unique": {
+        "PRINCE2": "• Strong emphasis on Stage Plans and mandatory stage boundaries, ensuring a predictable rhythm of governance reviews.",
+        "ISO21502": "• Obligates explicit governance-gate linkage for every phase transition, making life-cycle progression part of organizational accountability.",
+        "PMBOK": "• Explicitly encourages hybrid life cycles, blending predictive and adaptive methods. This makes it the most open to experimentation and modern practices."
+      },
+      "deepLinks": {                 
+        "PMBOK": [137],           
+        "PRINCE2": [410,521,524],
+        "ISO21502": [17]
+      }
+    },
+    "roles_organization": {
+      "title": "8. Roles & Organization",
+      "similarities": "• All three standards require clear definition of roles and responsibilities, ensuring that accountability and authority are well understood.\n\n• Each framework distinguishes between the sponsor (or governing role), who secures resources and approves strategy, and the project manager, who leads day-to-day management.\n\n• Team empowerment is recognized across all, though with varying levels of emphasis.",
+      "differences": {
+        "PRINCE2": "• Provides prescriptive role templates within its organizational theme, defining responsibilities for the Project Board (Executive, Senior User, Senior Supplier), Project Manager, Team Managers, and others. This makes role allocation structured and uniform.",
+        "ISO21502": "• Takes a competence-based approach, where the temporary project organization must be approved only once the competence of appointed individuals is verified. Role descriptions are adaptable but linked to organizational maturity.",
+        "PMBOK": "• Leaves role design flexible, encouraging empowerment and self-organization. Instead of prescribing positions, it frames roles as functions that can be adapted depending on team size, environment, and delivery approach."
+      },
+      "unique": {
+        "PRINCE2": "• Provides RACI-like descriptions for every role, ensuring clarity of accountability. Its governance structure (Project Board) is unique in how it embeds both supplier and user perspectives.",
+        "ISO21502": "• Unique in requiring competence verification before governance approval, making role assignment a formalized step in project setup.",
+        "PMBOK": "• Frames roles as adaptable functions rather than titles, enabling agile teams to adopt fluid structures (e.g., servant leaders, product owners) while still meeting project needs."
+      },
+      "deepLinks": {                 
+        "PMBOK": [111, 136],
+        "PRINCE2": [99],
+        "ISO21502": [19]
+      }
+    },
+    "planning": {
+      "title": "9. Planning (Scope, Schedule, Cost, Resources)",
+       "similarities": "• All frameworks emphasize that planning must be integrated and iterative, addressing scope, schedule, cost, and resource requirements in a coordinated way.\n\n• Planning is not a one-time exercise; it evolves as risks are identified, requirements clarified, and conditions change.\n\n• They all highlight that planning must remain aligned with the business case and overall project justification.",
+      "differences": {
+        "PRINCE2": "• Uses product-based planning as its foundation. It requires creation of a Product Breakdown Structure (PBS) and detailed Product Descriptions, which then drive the Work Packages, schedules, and costs. This makes PRINCE2 heavily deliverable-focused.",
+        "ISO21502": "• Aligns planning directly with the business case and benefits realization. Plans must explicitly show how outputs will contribute to outcomes and benefits. It allows flexibility in planning artifacts but requires alignment to governance oversight.",
+        "PMBOK": "• Defines Planning as one of its eight Performance Domains, emphasizing integrated methods and adaptability. It leverages the MMA catalog to provide a wide range of planning tools, from predictive scheduling (e.g., critical path) to adaptive methods (e.g., backlog refinement)."
+      },
+      "unique": {
+        "PRINCE2": "• Strongly emphasizes PBS and Product Descriptions, ensuring that deliverables and quality criteria are fully defined before work is authorized.",
+        "ISO21502": "• Promotes progressive justification, requiring plans to be continuously validated against the evolving business case.",
+        "PMBOK": "• Unique in its broad MMA catalog for planning, making it the most comprehensive in offering both traditional and agile planning techniques."
+      },
+      "deepLinks": {                 
+        "PMBOK": [146],
+        "PRINCE2": [147],
+        "ISO21502": [35]
+      } 
+    },
+    "risk_management": {
+      "title": "10. Risk Management & Uncertainty",
+       "similarities": "• All frameworks recognize risk management as ongoing and iterative throughout the project life cycle, not a one-time activity.\n\n• They all require risk identification, assessment, prioritization, mitigation planning, and escalation procedures.\n\n• Each emphasizes the importance of assigning ownership to risks and ensuring accountability for response actions.\n\n• Both threats (negative risks) and opportunities (positive risks) are acknowledged, though terminology and emphasis differ slightly.",
+      "differences": {
+        "PRINCE2": "• Defines risk as 'the chance of exposure to the adverse consequences of future events'. Risks are closely tied to tolerances and stage boundaries, meaning they are escalated when they threaten to exceed authorized limits. PRINCE2 prescribes the use of a Risk Register, Risk Log, and structured assessment techniques, embedding risk reviews at each stage.",
+        "ISO21502": "• Positions risk management within its governance and benefits framework. It explicitly requires projects to define risk appetite in the business case. Activities include identifying, analyzing (probability, consequence, proximity), treating (avoid, accept, transfer, mitigate, exploit, enhance), and monitoring. Risks must be owned by designated individuals.",
+        "PMBOK": "• Expands risk into the broader concept of uncertainty. It frames Principle 10 as 'Optimize Risk Responses', urging teams to balance threats and opportunities. Beyond risks, it addresses ambiguity, volatility, and complexity as uncertainty factors. Instead of prescribing specific tools, it uses the MMA catalog to recommend adaptive methods such as Monte Carlo simulations, risk-adjusted forecasting, and resilience planning."
+      },
+      "unique": {
+        "PRINCE2": "• Strongly links risks to tolerances and exception management. It provides prescriptive governance tools like Risk Registers and mandates formal risk ownership.",
+        "ISO21502": "• Explicitly requires definition of acceptable risk levels (risk appetite) as part of the business case, making it the most governance-integrated approach.",
+        "PMBOK": "• Unique in treating risk within the wider domain of uncertainty, incorporating complexity and resilience thinking rather than limiting itself to conventional risk registers."
+      },
+      "deepLinks": {                 
+       "PMBOK": [80, 214],
+       "PRINCE2": [186],
+       "ISO21502": [42]
+      }
+    },
+    "quality_management": {
+      "title": "11. Quality, Configuration & Change Control",
+      "similarities": "• All three emphasize quality planning, assurance, and control as integral parts of project management. Quality is not only about final deliverables but also about processes and stakeholder satisfaction.\n\n• Change control is universally recognized as critical to prevent uncontrolled scope creep and to maintain alignment with agreed baselines.\n\n• Configuration management is treated as part of governance, ensuring that all project products and baselines are identifiable, traceable, and controlled.",
+      "differences": {
+        "PRINCE2": "• Defines quality as 'the totality of features and characteristics of a product or service which bear on its ability to satisfy stated and implied needs'. Quality is addressed through Quality Plans, Quality Reviews, and Product Descriptions. Change control is formalized under Project Issues (Requests for Change, Off-Specifications, Questions). A Change Authority handles approvals. Configuration management is fully embedded, requiring a Configuration Librarian and a Product Status Account to track items.",
+        "ISO21502": "• Focuses on outputs being 'fit for purpose or use'. Quality management requires a quality plan with acceptance criteria, assurance methods, and validation techniques. Assurance includes independent audits. Change control follows a five-step cycle: framework setup, request identification, assessment, planning, implementation, and closure. A Change Register must track all requests.",
+        "PMBOK": "• Integrates quality into its Delivery and Measurement Domains, emphasizing built-in quality and prevention over inspection. It references an extensive quality toolkit in the MMA catalog. Change control is framed as part of the value-delivery system, requiring all changes to be assessed for potential value contribution."
+      },
+      "unique": {
+        "PRINCE2": "• Heavy reliance on configuration-management artifacts and formal governance roles such as the Change Authority.",
+        "ISO21502": "• Unique five-step change-control cycle with mandatory tracking and closure of each request; stresses independent audits.",
+        "PMBOK": "• Embeds quality into domains instead of treating it as a separate discipline, linking change directly to value realization."
+      },
+      "deepLinks": {                 
+        "PMBOK": [74, 182],
+        "PRINCE2": [124, 214],
+        "ISO21502": [44, 45]
+      }
+    },
+    "stakeholder_engagement": {
+      "title": "12. Stakeholder Engagement & Communication",
+       "similarities": "• All three standards stress that stakeholder engagement is fundamental to success, requiring early identification, analysis, and continuous engagement.\n\n• Communication is a tailored process—messages must be adapted to stakeholders’ influence, interest, culture, and needs.\n\n• Engagement and communication are ongoing strategies that evolve as the project progresses.",
+      "differences": {
+        "PRINCE2": "• Engagement occurs through the Communication Management Strategy and formal reports such as Highlight Reports, Exception Reports, and End Stage Reports. Communication flows are structured via governance roles, ensuring accountability but remaining formal and report-driven.",
+        "ISO21502": "• Treats stakeholder engagement and communication management as separate practices. Stakeholders are mapped by interest, influence, and expectations, and managed with planned strategies. Communication enables effective interactions considering cultural and geographic factors.",
+        "PMBOK": "• Elevates stakeholder engagement to a Performance Domain, making it one of eight domains of project success. Engagement is framed as building and maintaining positive relationships, using adaptive push, pull, and interactive communication methods."
+      },
+      "unique": {
+        "PRINCE2": "• Unique in delivering stakeholder communication through predefined management products and governance roles.",
+        "ISO21502": "• Unique in defining stakeholder engagement and communication as distinct practices, requiring explicit planning and monitoring.",
+        "PMBOK": "• Unique in positioning stakeholder engagement as a Performance Domain with emphasis on adaptive, collaborative strategies."
+      },
+      "deepLinks": {                 
+        "PMBOK": [58, 105],
+        "PRINCE2": [99],
+       "ISO21502": [47]
+      }
+    },
+    "benefits_management": {
+      "title": "13. Benefits, Post-Project Activities & Lessons Learned",
+      "similarities": "• All three frameworks emphasize that benefits realization is the ultimate measure of success. Deliverables only matter if they produce outcomes that create measurable value.\n\n• Each requires post-project activities to evaluate outcomes, verify benefits, and ensure sustained alignment with the business case.\n\n• All emphasize lessons learned as critical to organizational learning—capturing insights, documenting experiences, and feeding them into future projects.",
+      "differences": {
+        "PRINCE2": "• Links benefits to the Business Case, reviewed throughout the project. Post-project evaluations such as the Post Implementation Review assess whether anticipated benefits were realized. Lessons are captured in a Lessons Learned Report; closure requires formal product handover.",
+        "ISO21502": "• Positions benefits within Benefit Management (Clause 7.3). Benefits must be identified, analyzed, tracked, and sustained throughout and beyond the project. Post-project activities are mandatory, including benefit monitoring and responsibility transfer for continuation.",
+        "PMBOK": "• Frames benefits within the Value Delivery System—outcomes contributing to strategic goals. Benefits realization is continuous and tied to the principle 'Focus on Value'. Lessons learned support continuous learning and adaptation."
+      },
+      "unique": {
+        "PRINCE2": "• Formal closure products (End Project Report, Lessons Learned Report, PIR) make it prescriptive in documenting closure and benefits follow-up.",
+        "ISO21502": "• Only standard mandating benefit-sustainment checks and accountability transfer after handover.",
+        "PMBOK": "• Embeds benefits within enterprise strategy via its value-delivery system, not just at project closure."
+      },
+      "deepLinks": {                 
+         "PMBOK": [61, 144],
+         "PRINCE2": [52, 85, 369],
+         "ISO21502": [33, 34, 53]
+      }
+    },
+    "measurement_performance": {
+      "title": "14. Measurement-Performance & Reporting",
+      "similarities": "• All frameworks require regular progress monitoring and reporting for alignment and decision-making.\n\n• Emphasize transparency, accountability, and evidence-based management.\n\n• Link performance data to forecasts, risks, and benefits.",
+      "differences": {
+        "PRINCE2": "• Applies Management-by-Exception with tolerances for time, cost, scope, and risk. If breached, escalation occurs through Exception Reports. Uses Highlight, Checkpoint, End Stage, and End Project Reports—all linked to governance roles.",
+        "ISO21502": "• Defines performance management as enabling timely progress reporting and supporting governance decisions. Recommends measures such as earned-value, productivity metrics, quality audits, and benefit indicators.",
+        "PMBOK": "• Introduces Measurement as a Performance Domain, focusing on collecting, analyzing, and communicating data using dashboards and predictive indicators (velocity, throughput, burn charts, etc.)."
+      },
+      "unique": {
+        "PRINCE2": "• Exception-based reporting reduces admin effort.",
+        "ISO21502": "• Reports directly tied to governance gates for oversight.",
+        "PMBOK": "• Emphasizes diagnostic and predictive metrics—modern, adaptive toolkit."
+      },
+      "deepLinks": {                 
+         "PMBOK": [188],
+         "PRINCE2": [223],
+         "ISO21502": [26, 30, 50]
+      }
+    },
+    "procurement": {
+      "title": "15. Procurement & Supplier Management",
+      "similarities": "• All three frameworks stress that procurement and supplier management are critical where external vendors are involved.\n\n• They emphasize clear contracts, governance oversight, and accountability for supplier performance.\n\n• Each recognizes procurement as a governance-driven function ensuring alignment with objectives.",
+      "differences": {
+        "PRINCE2": "• Integrates suppliers into governance through the Senior Supplier role on the Project Board, representing supplier interests and ensuring technical integrity of deliverables.",
+        "ISO21502": "• Treats procurement as a distinct practice (Clause 7.12), covering requirement definition, planning, supplier selection, contract management, and closure. Supplier performance must be monitored continuously within governance procedures.",
+        "PMBOK": "• Frames procurement within the MMA catalog, offering predictive and adaptive techniques such as make-or-buy analysis, lean contracting, and iterative procurement."
+      },
+      "unique": {
+        "PRINCE2": "• Only framework with suppliers formally represented on the governing board.",
+        "ISO21502": "• Prescribes contract-governance processes aligned with organizational approvals.",
+        "PMBOK": "• Explicitly includes agile/lean procurement techniques for adaptive environments."
+      },
+      "deepLinks": {                 
+        "PMBOK": [],
+        "PRINCE2": [100, 107],
+        "ISO21502": [51, 52]
+      }
+    }
+  },
+  "scenarios": {
+  "software": {
+    "type": "software",
+    "name": "Custom Software Development Project",
+    "summary": "Lightweight agile process for rapid delivery",
+    "context": "This project involves developing a well-defined software solution with a small, co-located team. The primary constraints are a short timeline (<6 months) and a need for high adaptability to minor requirement changes from the client.",
+    "objective": "To design a lightweight, flexible process optimized for speed, continuous feedback, and incremental value delivery, minimizing overhead.",
+    "referencedStandards": {"PMBOK": "Principles 4 (Focus on Value), 7 (Tailor Based on Context), 10 (Optimize Risk Responses)",
+      "PRINCE2": "Plans & Progress themes",
+      "ISO": "7.2 (Establishing objectives), 7.13 (Controlling performance)"},
+    "phases": [
+      {
+        "name": "Initiation",
+        "activities": [
+          "Define project vision, high-level scope, and secure kick-off approval."
+        ],
+        "deliverables": [
+          "Charter: Authorizes the project."
+        ],
+        "roles": [
+          "Project Manager: Manages stakeholder communication and project constraints.",
+          "Scrum Master: Facilitates the Scrum process and removes impediments.",
+          "Developers: Design, build, and test the software.",
+          "QA Lead: Ensures quality standards and oversees testing.",
+          "Client Representative: Provides requirements and feedback, accepts deliverables."
+        ],
+        "decisionGates": [
+          "Kick-off Approval: Project is viable and authorized to start."
+        ]
+      },
+      {
+        "name": "Planning & Design",
+        "activities": [
+          "Create prioritized product backlog, define release plan."
+        ],
+        "deliverables": [
+          "Product Backlog: Prioritized list of all desired features."
+        ],
+        "roles": [],
+        "decisionGates": []
+      },
+      {
+        "name": "Execution (Sprints)",
+        "activities": [
+          "Conduct sprint planning, daily stand-ups, sprint development, and continuous integration."
+        ],
+        "deliverables": [
+          "Sprint Plan & Burndown Chart: Tracks progress within a sprint.",
+          "Increment: Potentially shippable product functionality after each sprint."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Sprint Review (Each Sprint): Stakeholders accept the increment and guide next steps."
+        ]
+      },
+      {
+        "name": "Testing & Delivery",
+        "activities": [
+          "Execute QA within each sprint, conduct user acceptance testing (UAT), and deploy to production."
+        ],
+        "deliverables": [
+          "Test Reports & Deployment Checklist: Ensures quality and smooth release."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "User Acceptance (UAT): Client formally accepts the final product."
+        ]
+      },
+      {
+        "name": "Closure",
+        "activities": [
+          "Conduct project retrospective, archive materials, and release team."
+        ],
+        "deliverables": [
+          "Closure Report."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Project Sign-off: Final closure and financials are settled."
+        ]
+      }
+    ],
+    "tailoringJustification": "An adaptive (Agile) approach was selected to accommodate the well-defined but potentially evolving requirements and the need for rapid delivery. PRINCE2's governance was simplified by embedding it within the sprint review cycle, avoiding the overhead of full stage-boundary documentation. ISO 21502's performance monitoring was aligned with agile metrics (e.g., burndown charts, velocity) instead of traditional metrics, providing transparency and control in a lightweight manner. Comprehensive planning phases were omitted in favor of just-in-time sprint planning to maintain flexibility."
+  },
+
+  "product": {
+    "type": "product",
+    "name": "Innovative Product Development Project",
+    "summary": "Hybrid process balancing innovation with structured governance",
+    "context": "This project is Research & Development (R&D) heavy, with high uncertainty in both the technological feasibility and the final market needs. The duration is approximately one year.",
+    "objective": "To design a hybrid-adaptive process that provides structure for governance and investment decisions while allowing maximum freedom for experimentation, iteration, and discovery within each stage.",
+    "referencedStandards": {"PMBOK": "Principles 2 (Collaborative Team), 4 (Focus on Value), 8 (Navigate Complexity), 12 (Adapt Thrively)",
+      "PRINCE2": "Starting Up a Project, Managing by Stages",
+      "ISO": "7.3 (Developing life cycle), 7.6 (Managing risk)"},
+    "phases": [
+      {
+        "name": "Concept & Feasibility",
+        "activities": [
+          "Exploratory research, market analysis, technical spike (proof-of-concept), feasibility study."
+        ],
+        "deliverables": [
+          "Feasibility Study & Business Case: Justifies project investment."
+        ],
+        "roles": [
+          "Project Sponsor: Provides funding and makes major go/no-go decisions.",
+          "R&D Lead: Drives the technical and exploratory work.",
+          "Product Owner: Manages the product backlog and defines user needs.",
+          "Developers & Test Engineers: Build and validate the product.",
+          "Business Analyst: Bridges the gap between technical and business stakeholders."
+        ],
+        "decisionGates": [
+          "Concept Approval: The idea is viable and worth investing in."
+        ]
+      },
+      {
+        "name": "Design & Prototyping",
+        "activities": [
+          "Rapid prototyping, usability testing, technical specification."
+        ],
+        "deliverables": [
+          "Prototypes & MVP: Tangible outputs for validation."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Prototype Validation: The chosen technology/design is feasible and desirable."
+        ]
+      },
+      {
+        "name": "Iterative Development",
+        "activities": [
+          "Agile sprints to build a minimum viable product (MVP), continuous stakeholder feedback."
+        ],
+        "deliverables": [
+          "Stage Review Reports: Documents for gate decisions."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Pilot Go/No-Go: The MVP is successful enough to justify a full launch."
+        ]
+      },
+      {
+        "name": "Pilot Testing",
+        "activities": [
+          "Deploy MVP to a limited user group, collect usage data and feedback."
+        ],
+        "deliverables": [
+          "Risk Register & Benefit Register: Live documents tracking uncertainties and expected value."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Final Launch Approval: Authorize full market release."
+        ]
+      },
+      {
+        "name": "Launch & Transition",
+        "activities": [
+          "Full-scale marketing, sales, and operational handover."
+        ],
+        "deliverables": [
+          "Lessons Learned Report."
+        ],
+        "roles": [],
+        "decisionGates": []
+      }
+    ],
+    "tailoringJustification": "A hybrid model was chosen to balance the need for R&D freedom with corporate governance. PMBOK and ISO 21502 provide the framework for managing complexity and risk in an R&D environment. PRINCE2's 'Managing by Stages' principle is used to create structured governance checkpoints (gates) that control funding and strategic direction without micromanaging the iterative work within each stage. This allows the project to be stopped or redirected based on empirical evidence, protecting the organization's investment while fostering innovation."
+  },
+
+  "government": {
+    "type": "government",
+    "name": "Large Government Project",
+    "summary": "Comprehensive process ensuring compliance and public accountability",
+    "context": "A large-scale, public-sector project involving integrated civil, electrical, and IT components over a 2-year duration. It is subject to strict regulatory compliance, public accountability, and complex procurement.",
+    "objective": "To design a comprehensive, predictive process with strong emphasis on governance, compliance, procurement, risk management, and transparent reporting.",
+    "referencedStandards": {"PMBOK":"Governance and Quality performance domains, Stewardship principle",
+      "PRINCE2":"Manage by Exception, Project Board, Quality Reviews ",
+       "ISO":"7.10 (Managing quality), 7.12 (Managing procurement) "},
+    "phases": [
+      {
+        "name": "Initiation",
+        "activities": [
+          "Develop detailed business case, stakeholder analysis, and secure funding."
+        ],
+        "deliverables": [
+          "Business Case: Justifies the project's existence and investment."
+        ],
+        "roles": [
+          "Executive Sponsor: Ultimate accountability and champion.",
+          "Project Board (PRINCE2): Represents business, user, and supplier interests, providing senior governance.",
+          "Project Manager: Manages the project day-to-day.",
+          "Procurement Officer: Manages all vendor contracts and compliance.",
+          "Quality Manager: Ensures deliverables meet standards and regulations.",
+          "Contractors: Execute the specialized work packages."
+        ],
+        "decisionGates": [
+          "Feasibility Approval: Project is publicly justified and funded."
+        ]
+      },
+      {
+        "name": "Planning",
+        "activities": [
+          "Create integrated project plan (scope, schedule, cost, quality, resources)."
+        ],
+        "deliverables": [
+          "Project Plan & Baselines: The definitive guide for execution and control."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Procurement Sign-off: Major contracts are legally sound and awarded."
+        ]
+      },
+      {
+        "name": "Design & Procurement",
+        "activities": [
+          "Finalize technical designs, tender documents, and manage vendor selection."
+        ],
+        "deliverables": [
+          "Risk Register & Quality Reports: Key control documents."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Stage Completion Reports (Periodic): Project Board confirms progress and authorizes next stage."
+        ]
+      },
+      {
+        "name": "Execution",
+        "activities": [
+          "Coordinate contractors, civil works, system installation, and construction."
+        ],
+        "deliverables": [
+          "Procurement Contracts & Performance Dashboards: Formal agreements and status reports."
+        ],
+        "roles": [],
+        "decisionGates": [
+          "Final Acceptance: The asset is formally handed over to operations."
+        ]
+      },
+      {
+        "name": "Monitoring & Control",
+        "activities": [
+          "Performance tracking (EVM), quality assurance, configuration management, change control, and governance reporting."
+        ],
+        "deliverables": [],
+        "roles": [],
+        "decisionGates": [
+          "Benefits Realization Review (Post-Project): Assess if the intended public value was achieved."
+        ]
+      },
+      {
+        "name": "Closure & Benefits Review",
+        "activities": [
+          "Final handover, contract close-out, post-project review, and benefits realization planning."
+        ],
+        "deliverables": [
+          "Closure & Benefits Realization Report."
+        ],
+        "roles": [],
+        "decisionGates": []
+      }
+    ],
+    "tailoringJustification": "A predictive life cycle was chosen for stability, predictability, and compliance, which are critical in government spending. PRINCE2's governance model, with a dedicated Project Board, ensures clear accountability and manages by exception, which is efficient for large projects. ISO 21502's detailed guidance on procurement and quality was integrated to ensure strict alignment with public sector policies and audit requirements. The extensive documentation and formal gates are not considered overhead but essential mechanisms for ensuring public accountability and managing the high risks associated with large-scale, multi-disciplinary projects."
+  }
+}
+
+   
+}
