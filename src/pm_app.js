@@ -1,53 +1,37 @@
-
-// Main application functionality
+//src/pm_app.js
 const API_BASE = window.location.origin + '/api';
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Launch Agency Standards Repository loaded');
-  initDataPopulations();
+document.addEventListener('DOMContentLoaded', async () => {
+  await initDataPopulations();       
   loadBookmarks();
+  const url = new URL(window.location.href);
+  const topicKey = url.searchParams.get('topic');
+  if (topicKey) {
+    const sel = document.getElementById('topicSelect');
+    setTimeout(() => {
+      if (sel && [...sel.options].some(o => o.value === topicKey)) {
+        sel.value = topicKey;
+        showComparison();          
+      }
+    }, 300);
+  }
 });
 
-// ========== Standards Actions ==========
+//  Standards 
 async function openStandard(standard, page = null) {
-  if (page) {
-    window.open(`/docs/${standard}.pdf#page=${page}`, '_blank');
-  } else {
-    window.open(`/docs/${standard}.pdf`, '_blank');
-  }
+  const url = `/pm_viewer.html?standard=${standard}${page ? `&page=${page}` : ''}`;
+  window.open(url, '_blank');
 }
 
 function downloadStandard(standard) {
   window.location.href = `/docs/${standard}.pdf`;
 }
 
-async function bookmarkStandard(standard, page = 1, topicKey = null, note = '') {
-  try {
-    const payload = { standard, page, topicKey, note };
-    const res = await fetch(`${API_BASE}/bookmarks`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const json = await res.json();
-    alert('✅ Bookmark saved');
-    console.log(json);
-    loadBookmarks();
-  } catch (err) {
-    console.error(err);
-    alert('❌ Failed to save bookmark');
-  }
-}
-
-// ========== Populate Topics & Scenarios ==========
+//  Topics & Scenarios
 async function initDataPopulations() {
   try {
-    // Fetch topics
     const topicsRes = await fetch(`${API_BASE}/topics`);
     const data = await topicsRes.json();
-
-    // Some APIs return {topics: [...]}, some just return [...]
     const topics = data.topics || data;
 
     const topicSelect = document.getElementById('topicSelect');
@@ -55,13 +39,12 @@ async function initDataPopulations() {
       topicSelect.innerHTML = '<option value="">Select a topic...</option>';
       topics.forEach(topic => {
         const opt = document.createElement('option');
-        opt.value = topic.key;        // must match backend field
+        opt.value = topic.key;        
         opt.textContent = topic.title || topic.key; 
         topicSelect.appendChild(opt);
       });
     }
-
-    // Fetch scenarios (for process generator page)
+    // Fetch scenarios 
     const scRes = await fetch(`${API_BASE}/scenarios`);
     const scenarios = await scRes.json();
     
@@ -73,7 +56,6 @@ async function initDataPopulations() {
       
       scenarios.forEach(scenario => {
         const opt = document.createElement('option');
-        // Use the name field that matches exactly what's in database
         opt.value = scenario.name || scenario._id;
         opt.textContent = scenario.name || scenario.title || 'Unnamed Scenario';
         scenarioSelect.appendChild(opt);
@@ -87,7 +69,6 @@ async function initDataPopulations() {
   }
 }
 
-//========== Show Comparison ==========
 async function showComparison() {
     const sel = document.getElementById('topicSelect');
     if (!sel) return;
@@ -204,12 +185,11 @@ async function showComparison() {
                 </div>
             </div>
 
-            <button class="action-btn" onclick="bookmarkStandard(null, 1, '${topicKey}')">
-                🔖 Bookmark this topic
+            <button class="action-btn" onclick="bookmarkComparisonTopic('${topicKey}')">
+              <i class="fas fa-bookmark"></i> Bookmark
             </button>
         `;
-
-        // Enable tab switching
+        //tab swithcing exist here 
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -227,9 +207,44 @@ async function showComparison() {
     }
 }
 
+//  Search BAR Function 
+function filterTopics() {
+  const searchInput = document.getElementById("searchInput");
+  const filter = searchInput.value.toLowerCase();
+  const topicSelect = document.getElementById("topicSelect");
+  if (!topicSelect || topicSelect.options.length <= 1) return;
+  for (let i = 0; i < topicSelect.options.length; i++) {
+    const option = topicSelect.options[i];
+    const text = option.text.toLowerCase();
+    if (i === 0) {
+      option.style.display = "";
+      continue;
+    }
+    option.style.display = text.includes(filter) ? "" : "none";
+  }
 
+  const visibleOptions = Array.from(topicSelect.options)
+    .filter(o => o.style.display !== "none").length;
 
-// ========== Show Tailored Process ==========
+  const resultsDiv = document.getElementById("comparisonResults");
+
+  if (visibleOptions <= 1) {
+    resultsDiv.innerHTML = "<p style='color:#777;font-style:italic;'>No topics found for your search.</p>";
+    resultsDiv.style.display = "block";
+  } else {
+    resultsDiv.style.display = "none";
+  }
+  if (visibleOptions === 2) {
+    const onlyMatch = Array.from(topicSelect.options).find(
+      (o, idx) => idx > 0 && o.style.display !== "none"
+    );
+    if (onlyMatch) {
+      topicSelect.value = onlyMatch.value;
+      showComparison();
+    }
+  }
+}
+
 async function showTailoredProcess() {
   const sel = document.getElementById('projectTypeSelect');
   if (!sel) return;
@@ -277,7 +292,7 @@ async function showTailoredProcess() {
     `;
   }
 }
-// Generate HTML for process display (same as before)
+
 function generateProcessHTML(process) {
   return `
     <div class="process-header">
@@ -291,7 +306,7 @@ function generateProcessHTML(process) {
     </div>
     
     <div class="standards-reference">
-      <h3>📚 Referenced Standards</h3>
+      <h3>Referenced Standards</h3>
       <div class="standards-grid">
         <div class="standard-item">
           <h4>PMBOK 7</h4>
@@ -309,13 +324,13 @@ function generateProcessHTML(process) {
     </div>
     
     <div class="process-diagram">
-      <h3>🔄 Process Workflow</h3>
+      <h3>Process Workflow</h3>
        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
          <p><em>Process diagram for ${process.title}</em></p>
          <img 
             src="/docs/${process.type}_process_flow.png" 
             alt="Process diagram for ${process.title}" 
-            style="max-width: 60%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 10px;"
+            style="max-width: 30%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 10px;"
             onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<p style=\'color:red;\'>⚠️ Diagram image not found.</p>')"
           />
        </div>
@@ -324,7 +339,7 @@ function generateProcessHTML(process) {
 
     
     <div class="phases-breakdown">
-      <h3>📋 Detailed Process Breakdown</h3>
+      <h3>Detailed Process Breakdown</h3>
       ${process.phases.map((phase, index) => `
         <div class="phase-card">
           <h4>Phase ${index + 1}: ${phase.name}</h4>
@@ -356,17 +371,182 @@ function generateProcessHTML(process) {
     </div>
   `;
 }
-// ========== Load Bookmarks ==========
+
+// Bookmark
+
+async function bookmarkStandard(standard, page = null, topicKey = null, note = '') {
+  try {
+    
+    if (standard && page === null) {
+      let currentPage = 1;
+      const pdfFrame = document.querySelector('iframe, embed');
+      if (pdfFrame && pdfFrame.src.includes('#page=')) {
+        const match = pdfFrame.src.match(/#page=(\d+)/);
+        if (match) currentPage = parseInt(match[1]);
+      } else {
+       
+        const hash = window.location.hash.match(/page=(\d+)/);
+        if (hash) currentPage = parseInt(hash[1]);
+      }
+      page = currentPage;
+    }
+
+    const payload = { standard, page, topicKey, note };
+    if (!topicKey && !standard) {
+      alert('Please provide a topic or standard to bookmark.');
+      return;
+    }
+
+    const res = await fetch(`${API_BASE}/bookmarks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+    alert('✅ Bookmark saved');
+    loadBookmarks();
+  } catch (err) {
+    console.error('bookmarkStandard error', err);
+    alert('❌ ' + err.message);
+  }
+}
 async function loadBookmarks() {
-  const out = document.getElementById('bookmarks');
+  const out = document.getElementById('bookmarksList');
   if (!out) return;
+
   try {
     const res = await fetch(`${API_BASE}/bookmarks`);
-    const data = await res.json();
-    out.innerHTML = '<ul>' + data.map(b =>
-      `<li>${b.topicKey || b.standard} (page ${b.page}) — ${new Date(b.createdAt).toLocaleString()}</li>`
-    ).join('') + '</ul>';
+    if (!res.ok) throw new Error(await res.text());
+    const bookmarks = await res.json();
+
+    if (!bookmarks || !bookmarks.length) {
+      out.innerHTML = '<p>No bookmarks saved yet.</p>';
+      return;
+    }
+    const topicBookmarks = bookmarks.filter(b => b.topicKey);
+    const standardBookmarks = bookmarks.filter(b => b.standard);
+    const renderStandardItems = standardBookmarks.map(b => `
+      <li class="bm-item" data-id="${b._id}">
+        <i class="fas fa-file-pdf"></i>
+        <strong style="margin-left:8px;">${b.standard}</strong>
+         — <a href="/docs/${b.standard}.pdf#page=${b.page}" target="_blank">Page ${b.page}</a>
+        <br/><small>${new Date(b.createdAt).toLocaleString()}</small>
+        <div class="bm-actions" style="margin-top:6px;">
+          <button onclick="editBookmark('${b._id}')" class="bm-edit">Edit</button>
+          <button onclick="deleteBookmark('${b._id}')" class="bm-delete">Delete</button>
+        </div>
+      </li>
+    `).join('');
+
+    const renderTopicItems = topicBookmarks.map(b => `
+      <li class="bm-item" data-id="${b._id}">
+        <i class="fas fa-lightbulb"></i>
+        <strong style="margin-left:8px; cursor:pointer;" onclick="selectTopicFromBookmark('${b.topicKey}')">${b.topicKey}</strong>
+        ${b.note ? ` — ${b.note}` : ''}
+        <br/><small>${new Date(b.createdAt).toLocaleString()}</small>
+        <div class="bm-actions" style="margin-top:6px;">
+          <button onclick="editBookmark('${b._id}')" class="bm-edit">Edit</button>
+          <button onclick="deleteBookmark('${b._id}')" class="bm-delete">Delete</button>
+        </div>
+      </li>
+    `).join('');
+
+    out.innerHTML = `
+      <div class="bookmark-category">
+        <h3>📘 Standard Bookmarks</h3>
+        ${standardBookmarks.length ? `<ul class="bookmark-list">${renderStandardItems}</ul>` : '<p>No standard bookmarks yet.</p>'}
+      </div>
+
+      <div class="bookmark-category">
+        <h3>Comparison Bookmarks</h3>
+        ${topicBookmarks.length ? `<ul class="bookmark-list">${renderTopicItems}</ul>` : '<p>No topic bookmarks yet.</p>'}
+      </div>
+    `;
+
+  } catch (err) {
+    console.error('Failed to load bookmarks', err);
+    out.innerHTML = '<p style="color:red;">Error loading bookmarks.</p>';
+  }
+}
+async function deleteBookmark(id) {
+  if (!confirm('Delete this bookmark?')) return;
+  try {
+    const res = await fetch(`${API_BASE}/bookmarks/${id}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error(await res.text());
+    alert('Bookmark deleted');
+    loadBookmarks();
+  } catch (err) {
+    console.error('deleteBookmark error', err);
+    alert('Failed to delete bookmark');
+  }
+}
+
+async function editBookmark(id) {
+  try {
+   
+    const res0 = await fetch(`${API_BASE}/bookmarks`);
+    const all = await res0.json();
+    const bm = all.find(x => x._id === id);
+    if (!bm) { alert('Bookmark not found'); return; }
+
+    const newNote = prompt('Edit note (leave empty to remove):', bm.note || '');
+    let newPage = bm.page || 1;
+    if (bm.standard) {
+      const pageInput = prompt('Edit page number:', String(bm.page || 1));
+      if (pageInput !== null) newPage = Number(pageInput) || 1;
+    }
+
+    const payload = {};
+    if (newNote !== null) payload.note = newNote;
+    if (bm.standard && newPage) payload.page = newPage;
+
+    const res = await fetch(`${API_BASE}/bookmarks/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error(await res.text());
+    alert('Bookmark updated');
+    loadBookmarks();
+  } catch (err) {
+    console.error('editBookmark error', err);
+    alert('Failed to update bookmark');
+  }
+}
+
+async function selectTopicFromBookmark(topicKey) {
+  const sel = document.getElementById('topicSelect');
+  if (sel) {
+    sel.value = topicKey;
+    showComparison();
+    
+    if (!document.getElementById('comparisonResults')) {
+      window.location.href = 'pm_comparison.html?topic=' + encodeURIComponent(topicKey);
+    }
+  } else {
+    
+    window.location.href = 'pm_comparison.html?topic=' + encodeURIComponent(topicKey);
+  }
+}
+async function bookmarkComparisonTopic(topicKey) {
+  const bookmark = {
+    type: "comparison",
+    topicKey,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    const res = await fetch(`${API_BASE}/bookmarks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(bookmark)
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+    alert(` Bookmark saved for Similarities of "${topicKey}"`);
   } catch (err) {
     console.error(err);
+    alert('❌ Failed to save bookmark');
   }
 }
