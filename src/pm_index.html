@@ -1,3 +1,4 @@
+<!--src/pm_index.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -23,9 +23,16 @@
                 <a href="pm_start.html" class="cta-button">Start Today</a>
             </nav>
         </div>
-    </header>
+        <style>
+          .bm-actions button { 
+              border: 1px solid #ddd; background: white; padding:6px 8px; border-radius:6px; margin-right:6px; cursor:pointer;
+             }
+           .bm-actions .bm-delete { border-color:#e74c3c; color:#e74c3c; }
+           .bm-actions .bm-edit { border-color:#3498db; color:#3498db; }
+           .bm-item { margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed #eee; }  
+       </style>
 
-    <!-- Hero Section -->
+    </header>
     <section class="hero">
         <div class="container">
             <h1>WE ARE<br><span class="accent">FULL-SERVICE</span><br>AGENCY</h1>
@@ -36,8 +43,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-title">
@@ -66,20 +71,18 @@
                     <h3>Process Generator</h3>
                     <p>Tailored process recommendations based on project type with detailed phase guidance.</p>
                 </a>
+        
+                 <a href="pm_bookmark.html" class="feature-card">
+                     <div class="feature-icon">
+                         <i class="fas fa-bookmark"></i>
+                     </div>
+                     <h3>My Bookmarks</h3>
+                     <p>Save and access your favorite topics, sections, and process examples across all standards for quick reference.</p>
+                 </a>
+                 
             </div>
-              <a href="pm_bookmark.html" class="feature-card">
-              <div class="feature-icon">
-                  <i class="fas fa-bookmark"></i>
-              </div>
-              <h3>My Bookmarks</h3>
-              <p>Save and access your favorite topics, sections, and process examples across all standards for quick reference.</p>
-              </a>
-
-            </div>
+        </div>
     </section>
-
-   
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
