@@ -21,8 +21,6 @@ async function main() {
 
   const raw = fs.readFileSync(file, 'utf8');
   const data = JSON.parse(raw);
-
-  // Topics: pm_data.json uses `topics` keyed object
   const topicsObj = data.topics || {};
   const topicKeys = Object.keys(topicsObj);
   console.log(`Seeding ${topicKeys.length} topics...`);
@@ -55,8 +53,6 @@ async function main() {
   }
 
   // Scenarios
-  
- // FIXED: Scenarios seeding - properly read from pm_data.json
   console.log('Seeding scenarios...');
   const scenariosObj = data.scenarios || {};
   const scenarioKeys = Object.keys(scenariosObj);
@@ -80,3 +76,4 @@ main().catch(err => {
   console.error(err);
   mongoose.disconnect();
 });
+
