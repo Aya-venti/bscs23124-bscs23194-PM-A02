@@ -1,3 +1,4 @@
+<!--src/pm_comparison.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +65,8 @@
     <div class="container">
       <div class="comparison-controls">
         <div class="search-box">
-          <input type="text" placeholder="Search across all standards...">
+          <input type="text" id="searchInput" placeholder="Search across all standards..." onkeyup="filterTopics()">
+
         </div>
         <div class="topic-select">
           <!-- Now dynamically loaded -->
@@ -92,13 +94,9 @@
           <a href="pm_library.html">Standards Library</a>
           <a href="pm_process.html">Process Generator</a>
           <a href="pm_bookmark.html">My Bookmarks</a>
+
         </div>
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
-          <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
-          <p><i class="fas fa-envelope"></i> info@launchagency.com</p>
-        </div>
+        
       </div>
       <div class="copyright">
         <p>&copy; 2023 Launch Agency. All rights reserved.</p>
@@ -109,5 +107,4 @@
   <!-- Load the updated JS -->
   <script src="pm_app.js"></script>
 </body>
-
 </html>
